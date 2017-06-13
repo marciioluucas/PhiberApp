@@ -2,18 +2,11 @@
 namespace view;
 include '../../vendor/autoload.php';
 use app\controller\PlacaController;
+use app\model\AMDBuilder;
 use app\model\NvidiaBuilder;
 
-if (isset($_POST)) {
-    if (isset($_POST) and $_POST['marca'] == "nvidia" and $_POST['action'] == "cadastrar") {
-        (new PlacaController((new NvidiaBuilder())))->cadastrar();
-    }
-
-    if (isset($_POST) and $_POST['marca'] == "amd" and $_POST['action'] == "cadastrar") {
-        (new PlacaController((new NvidiaBuilder())))->cadastrar();
-    }
-}
 $listaDeNVidia = (new PlacaController((new NvidiaBuilder())))->listar();
+$listaDeAMD = (new PlacaController((new AMDBuilder())))->listar();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,11 +28,11 @@ $listaDeNVidia = (new PlacaController((new NvidiaBuilder())))->listar();
 <main class="container">
 
     <div class="row">
-        <form class="col s12" action="frmCadastro.php" method="post">
+        <form class="col s12" action="cadastroCtrl.php" method="get">
             <input name="action" hidden value="cadastrar">
-            <span>Placa:</span>
+            <span>Marca:</span>
             <p>
-                <input name="marca" type="radio" id="nvidia" value="nvidia"/>
+                <input name="marca" type="radio" id="nvidia" value="NVidia"/>
                 <label for="nvidia">NVidia</label>
             </p>
             <p>
@@ -68,10 +61,11 @@ $listaDeNVidia = (new PlacaController((new NvidiaBuilder())))->listar();
                     <label for="memoria">Memória</label>
                 </div>
             </div>
-            <button type="submit" class="waves-effect waves-light btn">Enviar</button>
+            <input type="submit" class="waves-effect waves-light btn" value="Enviar">
 
         </form>
     </div>
+    <h5>Lista de NVidia</h5>
     <table>
         <thead>
         <tr>
@@ -91,6 +85,31 @@ $listaDeNVidia = (new PlacaController((new NvidiaBuilder())))->listar();
                     <td><?php echo $nvidia['memoria'] ?></td>
                     <td><?php echo $nvidia['precoMedio'] ?></td>
                     <td><?php echo $nvidia['ano'] ?></td>
+                </tr>
+
+            <?php } ?>
+            </tbody>
+    </table>
+    <h5>Lista de AMD</h5>
+    <table>
+        <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Memória</th>
+            <th>Preço médio</th>
+            <th>Ano</th>
+        </tr>
+        </thead>
+
+            <tbody>
+            <?php foreach ($listaDeAMD as $AMD) { ?>
+                <tr>
+                    <td><?php echo $AMD['marca'] ?></td>
+                    <td><?php echo $AMD['modelo'] ?></td>
+                    <td><?php echo $AMD['memoria'] ?></td>
+                    <td><?php echo $AMD['precoMedio'] ?></td>
+                    <td><?php echo $AMD['ano'] ?></td>
                 </tr>
 
             <?php } ?>

@@ -9,7 +9,7 @@
 namespace app\model;
 
 
-class AMDBuilderextends extends VgaBuilder
+class AMDBuilder extends VgaBuilder
 {
     public function buildMarca($marca)
     {

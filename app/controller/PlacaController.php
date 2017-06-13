@@ -12,7 +12,7 @@ use app\model\VgaBuilder;
 
 class PlacaController
 {
-    protected $placa;
+    public $placa;
 
 
     /**

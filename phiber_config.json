@@ -11,6 +11,6 @@
     },
     "log": true,
     "execute_querys": true,
-    "code_sync": true
+    "code_sync": false
   }
 }
