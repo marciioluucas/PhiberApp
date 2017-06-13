@@ -1,0 +1,27 @@
+{
+    "name": "ifgoiano/phiber-app",
+    "description": "A simple application with phiber",
+    "type": "project",
+    "require": {
+        "marciioluucas/phiber": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcio Lucas R Oliveira",
+            "email": "marciioluucas@gmail.com"
+        },
+        {
+            "name": "Juanes Adriano N C Filho",
+            "email": "juaneshtk50@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "scripts": {
+        "post-update-cmd": [
+            "npm install jquery",
+            "npm install materialize-css",
+            "npm update"
+        ]
+    }
+}
