@@ -22,10 +22,20 @@ abstract class VgaBuilder
     public abstract function buildModelo($modelo);
     public abstract function buildMemoria($memoria);
     public abstract function buildPrecoMedio($precoMedio);
-    public abstract function ano($ano);
+    public abstract function buildAno($ano);
 
     public function getVga(){
         return $this->vga;
+    }
+
+
+
+    public function cadastrar() {
+        return VgaProductDAO::cadastrar($this);
+    }
+
+    public function listar() {
+        return VgaProductDAO::listar($this);
     }
 
 }

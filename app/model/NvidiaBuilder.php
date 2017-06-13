@@ -11,33 +11,29 @@ namespace app\model;
 
 class NvidiaBuilder extends VgaBuilder
 {
-
     public function buildMarca($marca)
     {
-     $this->vga->marca = $marca;
+        $this->vga->setMarca($marca);
     }
-
 
     public function buildModelo($modelo)
     {
-        $this->vga->modelo = $modelo;
+        $this->vga->setModelo($modelo);
     }
 
     public function buildMemoria($memoria)
     {
-       $this->vga->memoria = $memoria;
+        $this->vga->setMemoria($memoria);
     }
-
 
     public function buildPrecoMedio($precoMedio)
     {
-        $this->vga->precoMedio = $precoMedio;
+        $this->vga->setPrecoMedio($precoMedio);
     }
 
-
-    public function ano($ano)
+    public function buildAno($ano)
     {
-        $this->vga->ano = $ano;
+        $this->vga->setAno($ano);
     }
 
 

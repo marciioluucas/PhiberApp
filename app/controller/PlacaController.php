@@ -26,6 +26,10 @@ class PlacaController
     }
 
     public function cadastrar() {
-
+        $toEcho = "<script>alert('Placa cadastrada com erro!')</script>";
+        if($this->placa->cadastrar()){
+            $toEcho = "<script>alert('Placa cadastrada com sucesso!')</script>";
+        }
+        echo $toEcho;
     }
 }
