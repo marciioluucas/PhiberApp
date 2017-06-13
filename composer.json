@@ -19,9 +19,10 @@
     "minimum-stability": "dev",
     "scripts": {
         "post-update-cmd": [
+            "npm update",
             "npm install jquery",
-            "npm install materialize-css",
-            "npm update"
+            "npm install materialize-css"
+
         ]
     }
 }

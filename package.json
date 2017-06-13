@@ -1,0 +1,26 @@
+{
+  "name": "PhiberApp",
+  "version": "1.0.0",
+  "description": "Simple phiber app",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.98.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marciioluucas/PhiberApp.git"
+  },
+  "keywords": [
+    "Phiber"
+  ],
+  "author": "Marcio Lucas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marciioluucas/PhiberApp/issues"
+  },
+  "homepage": "https://github.com/marciioluucas/PhiberApp#readme"
+}
