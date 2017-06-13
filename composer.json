@@ -24,5 +24,13 @@
             "npm install materialize-css"
 
         ]
+    },
+    "autoload": {
+        "psr-4": {
+            "phiber\\": "vendor/marciioluucas/phiber/",
+            "app\\model\\": "app/model/",
+            "app\\controller\\": "app/controller/",
+            "app\\view\\": "app/view/"
+        }
     }
 }

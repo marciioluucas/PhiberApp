@@ -10,64 +10,15 @@ namespace app\model;
 class VgaProduct
 {
 
-    /**
-     * @_type=int
-     * @_size=11
-     * @_primaryKey=true
-     * @_notNull=true
-     * @_default=none
-     * @_autoIncrement=true
-     */
-    private $id;
-    
-    /**
-     * @_type=varchar
-     * @_size=50
-     * @_primaryKey=false
-     * @_notNull=true
-     * @_default=none
-     * @_autoIncrement=false
-     */
+
     private $marca;
 
-    /**
-     * @_type=varchar
-     * @_size=50
-     * @_primaryKey=false
-     * @_notNull=true
-     * @_default=none
-     * @_autoIncrement=false
-     */
     private $modelo;
 
-    /**
-     * @_type=varchar
-     * @_size=50
-     * @_primaryKey=false
-     * @_notNull=true
-     * @_default=none
-     * @_autoIncrement=false
-     */
     private $memoria;
 
-    /**
-     * @_type=varchar
-     * @_size=50
-     * @_primaryKey=false
-     * @_notNull=true
-     * @_default=none
-     * @_autoIncrement=false
-     */
     private $precoMedio;
 
-    /**
-     * @_type=varchar
-     * @_size=50
-     * @_primaryKey=false
-     * @_notNull=true
-     * @_default=none
-     * @_autoIncrement=false
-     */
     private $ano;
 
     /**
@@ -149,10 +100,6 @@ class VgaProduct
     {
         $this->ano = $ano;
     }
-
-
-
-
 
 
 }

@@ -22,7 +22,6 @@ class PlacaController
     public function __construct($placa)
     {
         $this->placa = $placa;
-
     }
 
     public function cadastrar() {
@@ -31,5 +30,9 @@ class PlacaController
             $toEcho = "<script>alert('Placa cadastrada com sucesso!')</script>";
         }
         echo $toEcho;
+    }
+
+    public function listar() {
+        return $this->placa->listar();
     }
 }
