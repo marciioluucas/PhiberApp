@@ -15,7 +15,6 @@ if (isset($_POST)) {
     }
 }
 $listaDeNVidia = (new PlacaController((new NvidiaBuilder())))->listar();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,9 +30,11 @@ $listaDeNVidia = (new PlacaController((new NvidiaBuilder())))->listar();
 <table>
     <thead>
     <tr>
-        <th>Name</th>
-        <th>Item Name</th>
-        <th>Item Price</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Memória</th>
+        <th>Preço médio</th>
+        <th>Ano</th>
     </tr>
     </thead>
 
@@ -42,8 +43,9 @@ $listaDeNVidia = (new PlacaController((new NvidiaBuilder())))->listar();
         <tr>
             <td><?php echo $nvidia['marca'] ?></td>
             <td><?php echo $nvidia['modelo'] ?></td>
-            <td><?php ?></td>
-            <td><?php ?></td>
+            <td><?php echo $nvidia['memoria']?></td>
+            <td><?php echo $nvidia['precoMedio']?></td>
+            <td><?php echo $nvidia['ano']?></td>
         </tr>
 
     <?php } ?>
