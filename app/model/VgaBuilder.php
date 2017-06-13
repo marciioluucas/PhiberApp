@@ -6,26 +6,26 @@
  * Time: 11:37
  */
 
-namespace app\model;
-
+namespace model;
 
 abstract class VgaBuilder
 {
     protected $vga;
 
-    /**
-     * VgaBuilder constructor.
-     * @param $vga
-     */
-    public function __construct($vga)
+
+    public function __construct()
     {
-        $this->vga =  VgaProduct;
+        $this->vga =  new VgaProduct();
     }
 
-    public abstract function buildMarca();
-    public abstract function buildModelo();
-    public abstract function buildMemoria();
-    public abstract function buildPrecoMedio();
-    public abstract function ano();
+    public abstract function buildMarca($marca);
+    public abstract function buildModelo($modelo);
+    public abstract function buildMemoria($memoria);
+    public abstract function buildPrecoMedio($precoMedio);
+    public abstract function ano($ano);
+
+    public function getVga(){
+        return $this->vga;
+    }
 
 }
