@@ -8,10 +8,7 @@
 
 namespace controller;
 
-
-use model\NvidiaBuilder;
-use model\VgaBuilder;
-use model\VgaProduct;
+use app\model\VgaBuilder;
 
 class PlacaController
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace model;
+namespace app\model;
 /**
  * Created by PhpStorm.
  * User: juane

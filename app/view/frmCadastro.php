@@ -2,7 +2,7 @@
 namespace view;
 
 use controller\PlacaController;
-use model\NvidiaBuilder;
+use app\model\NvidiaBuilder;
 
 if (isset($_POST) and $_POST['placa'] == "nvidia" and $_POST['action'] == "cadastrar") {
     (new PlacaController((new NvidiaBuilder())))->cadastrar();

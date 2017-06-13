@@ -6,7 +6,7 @@
  * Time: 11:56
  */
 
-namespace model;
+namespace app\model;
 
 
 class NvidiaBuilder extends VgaBuilder

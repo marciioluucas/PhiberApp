@@ -6,7 +6,7 @@
  * Time: 11:37
  */
 
-namespace model;
+namespace app\model;
 
 abstract class VgaBuilder
 {
