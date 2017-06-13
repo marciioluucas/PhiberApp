@@ -6,7 +6,7 @@
  * Time: 12:01
  */
 
-namespace controller;
+namespace app\controller;
 
 use app\model\VgaBuilder;
 

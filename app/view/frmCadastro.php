@@ -1,7 +1,7 @@
 <?php
 namespace view;
 
-use controller\PlacaController;
+use app\controller\PlacaController;
 use app\model\NvidiaBuilder;
 
 if (isset($_POST) and $_POST['placa'] == "nvidia" and $_POST['action'] == "cadastrar") {
