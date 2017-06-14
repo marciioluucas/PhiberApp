@@ -5,8 +5,8 @@ use app\controller\PlacaController;
 use app\model\AMDBuilder;
 use app\model\NvidiaBuilder;
 
-$listaDeNVidia = (new PlacaController((new NvidiaBuilder())))->listar();
-$listaDeAMD = (new PlacaController((new AMDBuilder())))->listar();
+$listaDeNVidia = (new PlacaController((new NvidiaBuilder())))->listar("NVidia");
+$listaDeAMD = (new PlacaController((new AMDBuilder())))->listar("AMD");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +83,7 @@ $listaDeAMD = (new PlacaController((new AMDBuilder())))->listar();
                     <td><?php echo $nvidia['marca'] ?></td>
                     <td><?php echo $nvidia['modelo'] ?></td>
                     <td><?php echo $nvidia['memoria'] ?></td>
-                    <td><?php echo $nvidia['precoMedio'] ?></td>
+                    <td><?php echo $nvidia['precomedio'] ?></td>
                     <td><?php echo $nvidia['ano'] ?></td>
                 </tr>
 
@@ -108,7 +108,7 @@ $listaDeAMD = (new PlacaController((new AMDBuilder())))->listar();
                     <td><?php echo $AMD['marca'] ?></td>
                     <td><?php echo $AMD['modelo'] ?></td>
                     <td><?php echo $AMD['memoria'] ?></td>
-                    <td><?php echo $AMD['precoMedio'] ?></td>
+                    <td><?php echo $AMD['precomedio'] ?></td>
                     <td><?php echo $AMD['ano'] ?></td>
                 </tr>
 

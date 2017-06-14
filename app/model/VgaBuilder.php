@@ -10,9 +10,13 @@ namespace app\model;
 
 abstract class VgaBuilder
 {
+
     protected $vga;
 
 
+    /**
+     * VgaBuilder constructor.
+     */
     public function __construct()
     {
         $this->vga =  new VgaProduct();

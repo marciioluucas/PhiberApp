@@ -27,12 +27,13 @@ class PlacaController
     public function cadastrar() {
         $toEcho = "<script>alert('Placa cadastrada com erro!')</script>";
         if($this->placa->cadastrar()){
-            $toEcho = "<script>alert('Placa cadastrada com sucesso!')</script>";
+            $toEcho = "<script>alert('Placa cadastrada com sucesso!'); window.location = \"frmCadastro.php\";</script>";
         }
         echo $toEcho;
     }
 
-    public function listar() {
+    public function listar($marca) {
+        $this->placa->buildMarca($marca);
         return $this->placa->listar();
     }
 }

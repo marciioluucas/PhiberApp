@@ -14,18 +14,50 @@ use phiber\Phiber;
 class VgaProductDAO
 {
 
-    public static final function cadastrar($obj) {
+    /**
+     * @param VgaBuilder $obj
+     * @return bool
+     */
+    public static final function cadastrar($obj)
+    {
         $dao = (new Phiber())->openPersist($obj);
-        if($dao->create()){
+        $dao->setTable("placa");
+        $dao->setFields([
+            "marca",
+            "modelo",
+            "memoria",
+            "precoMedio",
+            "ano"
+        ]);
+        $dao->setValues([
+            $obj->getVga()->getMarca(),
+            $obj->getVga()->getModelo(),
+            $obj->getVga()->getMemoria(),
+            $obj->getVga()->getPrecoMedio(),
+            $obj->getVga()->getAno()
+        ]);
+
+        if ($dao->create()) {
             return true;
         }
         return false;
 
     }
 
-    public static final function listar($obj) {
-        $dao = (new Phiber())->openPersist($obj);
-        $dao->returnArray(true);
-        return $dao->select();
+    /**
+     * @param VgaBuilder $obj
+     * @return bool
+     */
+    public static final function listar($obj)
+    {
+        $phiber = new Phiber();
+        $criteria = $phiber->openPersist($obj);
+        $criteria->setTable("placa");
+        $restriction = $criteria->restrictions()
+            ->equals("marca", $obj->getVga()->getMarca());
+        $criteria->add($restriction);
+        $criteria->returnArray(true);
+        return $criteria->select();
+
     }
 }
